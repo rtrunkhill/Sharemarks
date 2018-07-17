@@ -20,7 +20,7 @@ namespace Sharemarks.Pages.Bookmarks
 
         public IActionResult OnGet()
         {
-        ViewData["TopicID"] = new SelectList(_context.Topic, "ID", "ID");
+        ViewData["TopicID"] = new SelectList(_context.Topic, "ID", "Title");
             return Page();
         }
 

@@ -12,5 +12,6 @@ namespace Sharemarks.Models
 
         public int TopicID { get; set; }
         public Topic Topic { get; set; }
+
     }
 }
