@@ -1,6 +1,7 @@
 ﻿@page
 @model Sharemarks.Pages.Topics.DetailsModel
 
+
 @{
     ViewData["Title"] = "Details";
 }
@@ -17,6 +18,15 @@
         <dd>
             @Html.DisplayFor(model => model.Topic.Title)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Topic.Bookmarks)
+        </dt>
+        @foreach (var item in Model.Topic.Bookmarks)
+        {
+        <dd>
+            @Html.DisplayFor(modelitem => item.Topic.Bookmarks)
+        </dd>
+        }
     </dl>
 </div>
 <div>

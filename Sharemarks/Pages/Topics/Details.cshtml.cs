@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Sharemarks.Models;
+ 
 
 namespace Sharemarks.Pages.Topics
 {
@@ -27,7 +28,8 @@ namespace Sharemarks.Pages.Topics
                 return NotFound();
             }
 
-            Topic = await _context.Topic.FirstOrDefaultAsync(m => m.ID == id);
+            Topic = await _context.Topic
+                .Include(b => b.Bookmarks).ThenInclude(ba => ba.Url).FirstOrDefaultAsync(m => m.ID == id);
 
             if (Topic == null)
             {
