@@ -29,7 +29,7 @@ namespace Sharemarks.Pages.Topics
             }
 
             Topic = await _context.Topic
-                .Include(b => b.Bookmarks).ThenInclude(ba => ba.Url).FirstOrDefaultAsync(m => m.ID == id);
+                .Include(b => b.Bookmarks).FirstOrDefaultAsync(m => m.ID == id);
 
             if (Topic == null)
             {

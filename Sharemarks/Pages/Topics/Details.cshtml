@@ -21,10 +21,9 @@
         <dt>
             @Html.DisplayNameFor(model => model.Topic.Bookmarks)
         </dt>
-        @foreach (var item in Model.Topic.Bookmarks)
-        {
+        @foreach (var item in Model.Topic.Bookmarks) {
         <dd>
-            @Html.DisplayFor(modelitem => item.Topic.Bookmarks)
+            @Html.DisplayFor(modelItem => item.Url)
         </dd>
         }
     </dl>
