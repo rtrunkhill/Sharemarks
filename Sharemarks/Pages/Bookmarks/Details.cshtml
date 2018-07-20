@@ -5,6 +5,7 @@
     ViewData["Title"] = "Details";
 }
 
+
 <h2>Details</h2>
 
 <div>
@@ -15,7 +16,8 @@
             @Html.DisplayNameFor(model => model.Bookmark.Url)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Bookmark.Url)
+
+            <a href='http://@Html.DisplayFor(model => model.Bookmark.Url)'>@Html.DisplayFor(model => model.Bookmark.Url)</a>
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Bookmark.Topic)
